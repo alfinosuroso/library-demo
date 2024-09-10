@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include_appbar_add"
+        layout="@layout/appbar_component"/>
+    <!--edit text field for adding title-->
+    <EditText
+        android:id="@+id/edt_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="25dp"
+        style="@style/main_title"
+        android:inputType="text"
+        android:hint="Enter your title" />
+
+    <!--edit text field for adding price-->
+    <EditText
+        android:id="@+id/edt_price"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="25dp"
+        style="@style/main_title"
+        android:inputType="number"
+        android:hint="Enter your price" />
+
+    <!--edit text field for adding description-->
+    <EditText
+        android:id="@+id/edt_description"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="25dp"
+        style="@style/main_title"
+        android:inputType="text"
+        android:hint="Enter your description" />
+
+    <!--edit text field for adding image-->
+    <EditText
+        android:id="@+id/edt_image"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="25dp"
+        style="@style/main_title"
+        android:inputType="text"
+        android:hint="Enter your image" />
+
+    <!--edit text field for adding category-->
+    <EditText
+        android:id="@+id/edt_category"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="25dp"
+        style="@style/main_title"
+        android:inputType="text"
+        android:hint="Enter your category" />
+
+    <!--button for adding data-->
+    <Button
+        android:id="@+id/btn_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Send Data to API"
+        android:textAllCaps="false" />
+
+    <!--text view for displaying our API response-->
+    <TextView
+        android:id="@+id/tv_response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:text="Response"
+        android:textAlignment="center"
+        android:textSize="15sp" />
+
+    <!--progress bar for loading -->
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>

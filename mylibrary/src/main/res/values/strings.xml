@@ -1,0 +1,18 @@
+<resources>
+    <string name="MY_LIBRARY">My Application</string>
+    <string name="choose_payment">Pilih Pembayaran</string>
+    <string name="detail_payment">Rincian Pesanan</string>
+    <string name="description">Deskripsi</string>
+    <string name="total_payment">Total Pembayaran</string>
+    <string name="choose_payment_method">Pilih Metode Pembayaran</string>
+    <string name="cash">Tunai</string>
+    <string name="debit">Debit</string>
+    <string name="next">Selanjutnya</string>
+    <string name="date">Tanggal</string>
+    <string name="payment">Pembayaran</string>
+    <string name="print_payment">CETAK PEMBAYARAN</string>
+    <string name="back_to_home">KEMBALI KE BERANDA</string>
+    <string name="payment_success">Pembayaran Sukses</string>
+    <string name="powered_by_mkp_mobile">Powered by MKP Mobile</string>
+    <string name="payment_fail">Pembayaran Gagal</string>
+</resources>
