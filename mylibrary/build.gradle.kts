@@ -1,10 +1,17 @@
 plugins {
     alias(libs.plugins.android.library)
+    id("org.jetbrains.kotlin.android") version "2.0.20"
+    id("maven-publish")
 }
 
 android {
-    namespace = "com.example.mylibrary"
+    namespace = "io.github.alfinosuroso"
     compileSdk = 34
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
 
     defaultConfig {
         minSdk = 24
@@ -48,4 +55,46 @@ dependencies {
 
     implementation ("com.facebook.shimmer:shimmer:0.5.0")
     implementation ("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "io.github.alfinosuroso"
+                artifactId = "mylibrary"
+                version = "1.0.0"
+
+                pom {
+                    packaging = "aar"
+                    name.set("MyLibrary")
+                    description.set("MyLibrary: Library for Android Application")
+                    url.set("https://github.com/alfinosuroso/library-demo.git")
+                    inceptionYear.set("2024")
+
+                    licenses {
+                        license {
+                            name.set("MIT License")
+                            url.set("https://opensource.org/licenses/MIT")
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id.set("AlfinoSuroso")
+                            name.set("Alfino Suroso")
+                            email.set("alfinosuroso@gmail.com")
+                        }
+                    }
+
+                    scm {
+                        connection.set("scm:git@github.com:alfinosuroso/library-demo")
+                        developerConnection.set("scm:git@github.com:alfinosuroso/library-demo.git")
+                        url.set("https://github.com/alfinosuroso/library-demo.git")
+                    }
+                }
+            }
+        }
+    }
 }

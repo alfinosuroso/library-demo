@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.alfinosuroso</groupId>
-    <artifactId>library-demo</artifactId>
+    <artifactId>mylibrary</artifactId>
     <version>1.0.0</version>
 
     <properties>
@@ -14,8 +14,8 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>mylibrary</name>
-            <url>https://maven.pkg.github.com/alfinosuroso/mylibrary</url>
+            <name>library-demo</name>
+            <url>https://maven.pkg.github.com/alfinosuroso/library-demo</url>
         </repository>
     </distributionManagement>
 </project>
