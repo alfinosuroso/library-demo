@@ -17,7 +17,6 @@ import com.alfinosuroso.mylibrary.Listener.ItemClickListener;
 import com.alfinosuroso.mylibrary.Module.Success.MySuccess;
 import com.alfinosuroso.mylibrary.Adapter.MethodPaymentAdapter;
 import com.alfinosuroso.mylibrary.Models.MethodPayment;
-import com.example.mylibrary.R;
 
 import java.util.ArrayList;
 
@@ -39,17 +38,17 @@ public class MyPurchase implements DialogListener {
     public MyPurchase(final Context context, boolean isDisplay, int amount, ArrayList<MethodPayment> listMethodPayment, MyPurchaseCallback myPurchaseCallback) {
         this.ctx = context;
         this.mpc = myPurchaseCallback;
-        (dialog = new Dialog(context, android.R.style.Theme_Holo_Light_NoActionBar)).setContentView(R.layout.activity_payment);
-        this.btnBack = (ImageView) this.dialog.findViewById(R.id.iv_back);
+        (dialog = new Dialog(context, android.R.style.Theme_Holo_Light_NoActionBar)).setContentView(io.github.alfinosuroso.R.layout.activity_payment);
+        this.btnBack = (ImageView) this.dialog.findViewById(io.github.alfinosuroso.R.id.iv_back);
         this.btnBack.setOnClickListener(view -> {
             this.dialog.dismiss();
         });
-        this.tv1 = (TextView) this.dialog.findViewById(R.id.total_payment_value);
-        this.tv2 = (TextView) this.dialog.findViewById(R.id.description_value);
+        this.tv1 = (TextView) this.dialog.findViewById(io.github.alfinosuroso.R.id.total_payment_value);
+        this.tv2 = (TextView) this.dialog.findViewById(io.github.alfinosuroso.R.id.description_value);
 
 //        Init
         this.paymentsList = listMethodPayment;
-        this.rvPayments = (RecyclerView) this.dialog.findViewById(R.id.rv_method_payment);
+        this.rvPayments = (RecyclerView) this.dialog.findViewById(io.github.alfinosuroso.R.id.rv_method_payment);
         itemClickListener = new ItemClickListener() {
             @Override
             public void onClick(String s) {
@@ -67,7 +66,7 @@ public class MyPurchase implements DialogListener {
 
         this.tv1.setText(String.valueOf(amount));
         this.tv2.setText("Deskripsi");
-        this.btnNext = (Button) this.dialog.findViewById(R.id.btn_next);
+        this.btnNext = (Button) this.dialog.findViewById(io.github.alfinosuroso.R.id.btn_next);
         this.btnNext.setOnClickListener(view -> {
 //            this.dialog.dismiss();
             if (this.selectedPayment == "" || this.selectedPayment == null) {

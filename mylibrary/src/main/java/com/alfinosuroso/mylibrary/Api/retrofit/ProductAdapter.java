@@ -14,7 +14,6 @@ import com.squareup.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-import com.example.mylibrary.R;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
     private List<ProductData> dataList;
@@ -28,7 +27,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view =LayoutInflater.from(context).inflate(R.layout.product_activity_component_card, parent, false);
+        View view =LayoutInflater.from(context).inflate(io.github.alfinosuroso.R.layout.product_activity_component_card, parent, false);
         return new ProductViewHolder(view);
     }
 
@@ -39,8 +38,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
         Picasso.Builder builder = new Picasso.Builder(context);
         builder.downloader(new OkHttp3Downloader(context));
         builder.build().load(productData.getImage())
-                .placeholder((R.drawable.ic_launcher_background))
-                .error(R.drawable.ic_launcher_background)
+                .placeholder((io.github.alfinosuroso.R.drawable.ic_launcher_background))
+                .error(io.github.alfinosuroso.R.drawable.ic_launcher_background)
                 .into(holder.image);
 
         holder.setTitle(productData.getTitle());

@@ -28,6 +28,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -72,6 +73,7 @@ afterEvaluate {
                     description.set("MyLibrary: Library for Android Application")
                     url.set("https://github.com/alfinosuroso/library-demo.git")
                     inceptionYear.set("2024")
+
 
                     licenses {
                         license {

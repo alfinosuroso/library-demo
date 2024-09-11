@@ -12,10 +12,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.alfinosuroso.mylibrary.Listener.ItemClickListener;
 import com.alfinosuroso.mylibrary.viewholder.MethodPaymentViewHolder;
-import com.example.mylibrary.R;
 import com.alfinosuroso.mylibrary.Models.MethodPayment;
 
 import java.util.ArrayList;
+
+import io.github.alfinosuroso.R;
 
 public class MethodPaymentAdapter extends RecyclerView.Adapter<MethodPaymentViewHolder> {
     private Context context;
@@ -32,7 +33,7 @@ public class MethodPaymentAdapter extends RecyclerView.Adapter<MethodPaymentView
     @NonNull
     @Override
     public MethodPaymentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.row_method_payment, parent, false);
+        View view = LayoutInflater.from(context).inflate(io.github.alfinosuroso.R.layout.row_method_payment, parent, false);
         return new MethodPaymentViewHolder(view);
     }
 

@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.example.mylibrary.R;
 import com.alfinosuroso.mylibrary.Api.retrofit.MyAPIService;
 import com.alfinosuroso.mylibrary.Api.retrofit.MyApiClient;
 import com.alfinosuroso.mylibrary.Api.retrofit.ProductAdapter;
@@ -51,15 +50,15 @@ public class MyProduct {
 
     public MyProduct(final Context context) {
         this.ctx = context;
-        (dialogProduct = new Dialog(context, android.R.style.Theme_Holo_Light_NoActionBar)).setContentView(R.layout.product_activity);
-        this.linearAppbar = (LinearLayout) dialogProduct.findViewById(R.id.include_appbar_add);
-        this.tvAppbarProduct = (TextView) linearAppbar.findViewById(R.id.tv_title_appbar);
-        this.fab = (FloatingActionButton) dialogProduct.findViewById(R.id.fab_add);
-        this.recyclerView = (RecyclerView) dialogProduct.findViewById(R.id.rv_product);
-        this.tvFail = (TextView) dialogProduct.findViewById(R.id.tv_fail_product);
-        this.btnBack = (ImageView) linearAppbar.findViewById(R.id.iv_back);
-        this.shimmerProduct = (ShimmerFrameLayout) dialogProduct.findViewById(R.id.shimmer_product);
-        this.swipeProduct = (SwipeRefreshLayout) dialogProduct.findViewById(R.id.swipe_product);
+        (dialogProduct = new Dialog(context, android.R.style.Theme_Holo_Light_NoActionBar)).setContentView(io.github.alfinosuroso.R.layout.product_activity);
+        this.linearAppbar = (LinearLayout) dialogProduct.findViewById(io.github.alfinosuroso.R.id.include_appbar_add);
+        this.tvAppbarProduct = (TextView) linearAppbar.findViewById(io.github.alfinosuroso.R.id.tv_title_appbar);
+        this.fab = (FloatingActionButton) dialogProduct.findViewById(io.github.alfinosuroso.R.id.fab_add);
+        this.recyclerView = (RecyclerView) dialogProduct.findViewById(io.github.alfinosuroso.R.id.rv_product);
+        this.tvFail = (TextView) dialogProduct.findViewById(io.github.alfinosuroso.R.id.tv_fail_product);
+        this.btnBack = (ImageView) linearAppbar.findViewById(io.github.alfinosuroso.R.id.iv_back);
+        this.shimmerProduct = (ShimmerFrameLayout) dialogProduct.findViewById(io.github.alfinosuroso.R.id.shimmer_product);
+        this.swipeProduct = (SwipeRefreshLayout) dialogProduct.findViewById(io.github.alfinosuroso.R.id.swipe_product);
 
         tvAppbarProduct.setText("Produk");
         this.btnBack.setOnClickListener(new View.OnClickListener() {
@@ -78,10 +77,10 @@ public class MyProduct {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                (dialogAddProduct = new Dialog(ctx, android.R.style.Theme_Holo_Light_NoActionBar)).setContentView(R.layout.product_activity_add_data);
-                linearAppbarAdd = (LinearLayout) dialogAddProduct.findViewById(R.id.include_appbar_add);
-                tvAppbarAdd = (TextView) linearAppbarAdd.findViewById(R.id.tv_title_appbar);
-                btnBackAdd = (ImageView) linearAppbarAdd.findViewById(R.id.iv_back);
+                (dialogAddProduct = new Dialog(ctx, android.R.style.Theme_Holo_Light_NoActionBar)).setContentView(io.github.alfinosuroso.R.layout.product_activity_add_data);
+                linearAppbarAdd = (LinearLayout) dialogAddProduct.findViewById(io.github.alfinosuroso.R.id.include_appbar_add);
+                tvAppbarAdd = (TextView) linearAppbarAdd.findViewById(io.github.alfinosuroso.R.id.tv_title_appbar);
+                btnBackAdd = (ImageView) linearAppbarAdd.findViewById(io.github.alfinosuroso.R.id.iv_back);
                 tvAppbarAdd.setText("Tambah Produk");
                 btnBackAdd.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -89,14 +88,14 @@ public class MyProduct {
                         dialogAddProduct.dismiss();
                     }
                 });
-                editTitle = (EditText) dialogAddProduct.findViewById(R.id.edt_title);
-                editPrice = (EditText) dialogAddProduct.findViewById(R.id.edt_price);
-                editDesc = (EditText) dialogAddProduct.findViewById(R.id.edt_description);
-                editImage = (EditText) dialogAddProduct.findViewById(R.id.edt_image);
-                editCategory = (EditText) dialogAddProduct.findViewById(R.id.edt_category);
-                btnPost = (Button) dialogAddProduct.findViewById(R.id.btn_post);
-                pbLoading = (ProgressBar) dialogAddProduct.findViewById(R.id.pb_loading);
-                tvResponse = (TextView) dialogAddProduct.findViewById(R.id.tv_response);
+                editTitle = (EditText) dialogAddProduct.findViewById(io.github.alfinosuroso.R.id.edt_title);
+                editPrice = (EditText) dialogAddProduct.findViewById(io.github.alfinosuroso.R.id.edt_price);
+                editDesc = (EditText) dialogAddProduct.findViewById(io.github.alfinosuroso.R.id.edt_description);
+                editImage = (EditText) dialogAddProduct.findViewById(io.github.alfinosuroso.R.id.edt_image);
+                editCategory = (EditText) dialogAddProduct.findViewById(io.github.alfinosuroso.R.id.edt_category);
+                btnPost = (Button) dialogAddProduct.findViewById(io.github.alfinosuroso.R.id.btn_post);
+                pbLoading = (ProgressBar) dialogAddProduct.findViewById(io.github.alfinosuroso.R.id.pb_loading);
+                tvResponse = (TextView) dialogAddProduct.findViewById(io.github.alfinosuroso.R.id.tv_response);
 
                 btnPost.setOnClickListener(new View.OnClickListener() {
                     @Override

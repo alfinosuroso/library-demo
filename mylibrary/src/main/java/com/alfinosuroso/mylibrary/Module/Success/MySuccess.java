@@ -6,7 +6,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.alfinosuroso.mylibrary.Listener.DialogListener;
-import com.example.mylibrary.R;
 
 import java.text.NumberFormat;
 import java.util.Locale;
@@ -24,12 +23,12 @@ public class MySuccess {
     public MySuccess(Context context, DialogListener dialogListener, String amount, String date, String payment, String desc) {
         this.ctx = context;
         this.dialogListener = dialogListener;
-        (dialog = new Dialog(context, android.R.style.Theme_Holo_Light_NoActionBar)).setContentView(R.layout.activity_payment_success);
-        this.tvAmount = (TextView) this.dialog.findViewById(R.id.tv_amount);
-        this.tvDate = (TextView) this.dialog.findViewById(R.id.tv_date);
-        this.tvPayment = (TextView) this.dialog.findViewById(R.id.tv_payment);
-        this.tvDescription = (TextView) this.dialog.findViewById(R.id.tv_description);
-        this.btnBack = (Button) this.dialog.findViewById(R.id.btn_back);
+        (dialog = new Dialog(context, android.R.style.Theme_Holo_Light_NoActionBar)).setContentView(io.github.alfinosuroso.R.layout.activity_payment_success);
+        this.tvAmount = (TextView) this.dialog.findViewById(io.github.alfinosuroso.R.id.tv_amount);
+        this.tvDate = (TextView) this.dialog.findViewById(io.github.alfinosuroso.R.id.tv_date);
+        this.tvPayment = (TextView) this.dialog.findViewById(io.github.alfinosuroso.R.id.tv_payment);
+        this.tvDescription = (TextView) this.dialog.findViewById(io.github.alfinosuroso.R.id.tv_description);
+        this.btnBack = (Button) this.dialog.findViewById(io.github.alfinosuroso.R.id.btn_back);
         String formattedAmount = formatToRupiah(Integer.parseInt(amount));
         tvAmount.setText(formattedAmount + " Terkirim");
         tvDate.setText(date);

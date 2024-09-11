@@ -6,8 +6,6 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mylibrary.R;
-
 
 public class ProductViewHolder extends RecyclerView.ViewHolder {
     public final View mView;
@@ -18,9 +16,9 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
     public ProductViewHolder(View itemView) {
         super(itemView);
         mView = itemView;
-        title = (TextView) mView.findViewById(R.id.tv_title);
-        description = (TextView) mView.findViewById(R.id.tv_description);
-        image = (ImageView) mView.findViewById(R.id.iv_product);
+        title = (TextView) mView.findViewById(io.github.alfinosuroso.R.id.tv_title);
+        description = (TextView) mView.findViewById(io.github.alfinosuroso.R.id.tv_description);
+        image = (ImageView) mView.findViewById(io.github.alfinosuroso.R.id.iv_product);
     }
 
     public void setTitle(String titleName) {
